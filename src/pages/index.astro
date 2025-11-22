@@ -3,23 +3,23 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Celebrating Love">
-  <h1>Congratulations on Your Wedding</h1>
-  <p>Wishing you joy, laughter, and endless love as you begin this new chapter together.</p>
+  <!-- Hero Section -->
+  <section class="hero scroll-animate">
+    <h1>Celebrating Love</h1>
+    <p>Wishing you joy, laughter, and endless love as you begin this new chapter together.</p>
+  </section>
 
-  <section class="wordcloud">
+  <!-- Word Cloud Section -->
+  <section class="wordcloud scroll-animate">
     <span>Congratulations!</span>
     <span>Best Wishes</span>
     <span>Lots of Love</span>
     <span>Forever Happiness</span>
     <span>Cheers to You</span>
-    <span>Joyful Journey</span>
-    <span>Happily Ever After</span>
-    <span>Warmest Regards</span>
-    <span>Celebrate Love</span>
   </section>
 
-  <nav>
-    <a href="/message">A Note</a> |
-    <a href="/gallery">Gallery</a>
-  </nav>
+  <!-- Navigation -->
+  <section class="buttons scroll-animate">
+    <button onclick="window.location.href='/message'">View Messages</button>
+  </section>
 </Layout>
