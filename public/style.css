@@ -1,23 +1,92 @@
 body {
   font-family: 'Playfair Display', serif;
-  background: #fffaf5;
-  color: #333;
+  background: #ffffff; /* white */
+  color: #002b5c; /* deep blue */
   text-align: center;
   margin: 0;
   padding: 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 header, footer {
-  background: #f8e1e7;
+  background: #002b5c; /* blue */
+  color: #ffd700; /* gold */
   padding: 1rem;
 }
 
 h1, h2 {
-  color: #b85c5c;
+  color: #002b5c;
 }
 
-img {
-  max-width: 300px;
-  margin: 1rem;
+a {
+  color: #002b5c;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ffd700; /* gold hover */
+}
+
+.wordcloud {
+  margin: 2rem auto;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.wordcloud span {
+  display: inline-block;
+  background: #ffd700; /* gold */
+  color: #002b5c; /* blue text */
+  padding: 0.5rem 1rem;
   border-radius: 8px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px) rotate(-5deg); }
+  100% { transform: translateY(0); }
+}
+
+/* Messages list */
+.messages {
+  list-style: none;
+  padding: 0;
+}
+
+.messages li {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  background: #ffd700;
+  color: #002b5c;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Page fade-in */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
