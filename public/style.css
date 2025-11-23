@@ -171,3 +171,48 @@ header, footer {
 .poem p {
   margin: 0;
 }
+
+/* Messages Section */
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 3rem auto;
+}
+
+/* Each message card */
+.message-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: linear-gradient(135deg, #d4af37, #b8860b, #f9e79f); /* metallic gold gradient */
+  color: #002b5c;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(212,175,55,0.6);
+}
+
+/* Images inside cards */
+.message-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Text inside cards */
+.message-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  flex: 1;
+}
